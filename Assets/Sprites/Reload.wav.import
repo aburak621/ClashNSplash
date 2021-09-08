@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Reload.wav-e324a798d3f527f13d435b8d431d99a9.sample"
+
+[deps]
+
+source_file="res://Assets/Sprites/Reload.wav"
+dest_files=[ "res://.import/Reload.wav-e324a798d3f527f13d435b8d431d99a9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

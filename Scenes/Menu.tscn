@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/Stars.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Background.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/OptionsButton.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/MusicButton.gd" type="Script" id=6]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Node2D" parent="ColorRect"]
+script = ExtResource( 4 )
+
+[node name="Stars" type="Sprite" parent="ColorRect/Background"]
+show_behind_parent = true
+position = Vector2( 64, 64 )
+texture = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_right = 27.0
+margin_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+margin_right = 55.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 1 )
+text = "Start"
+flat = true
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 55.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 1 )
+text = "pIXELATION"
+flat = true
+script = ExtResource( 5 )
+
+[node name="MusicButton" type="Button" parent="VBoxContainer"]
+margin_top = 36.0
+margin_right = 55.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 1 )
+text = "MUSIC"
+flat = true
+script = ExtResource( 6 )
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+margin_top = 54.0
+margin_right = 55.0
+margin_bottom = 68.0
+custom_fonts/font = ExtResource( 1 )
+text = "Quit"
+flat = true
+
+[node name="Title" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.8597
+margin_top = -24.3675
+margin_right = 39.1403
+margin_bottom = -15.3675
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[color=#ffec27]CLASH[/color] [color=#29adff]N[/color] [color=#ff004d]Splash[/color]"
+text = "CLASH N Splash"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="VBoxContainer/OptionsButton" method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/MusicButton" to="VBoxContainer/MusicButton" method="_on_MusicButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]

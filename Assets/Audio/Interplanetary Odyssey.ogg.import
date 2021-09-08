@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Interplanetary Odyssey.ogg-1762246a30c8a9cc7351ebba11ff67dc.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Interplanetary Odyssey.ogg"
+dest_files=[ "res://.import/Interplanetary Odyssey.ogg-1762246a30c8a9cc7351ebba11ff67dc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
